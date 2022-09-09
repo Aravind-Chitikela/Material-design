@@ -1,0 +1,43 @@
+<mat-expansion-panel hideToggle >
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Provide Registration Details
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+    <div>
+      <mat-form-field >
+        <input type="text" matInput placeholder="Enter Name" [(ngModel)] = "visitor.name">
+
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Enter Mobile Number" [(ngModel)] = "visitor.mobile"> 
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Enter IdProof" [(ngModel)] = "visitor.idProof">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Enter Purpose" [(ngModel)] = "visitor.purpose">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Enter Company" [(ngModel)] = "visitor.company">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Enter Contact Person" [(ngModel)] = "visitor.contactPerson">
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="accent" (click)="onSubmit()">Save</button>
+    </div>
+</mat-expansion-panel>
+
+

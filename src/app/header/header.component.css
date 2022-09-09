@@ -1,0 +1,11 @@
+ul li{
+  display: inline;
+  padding: 10px;
+}
+
+@media(max-width:400px){
+  ul li{
+    display: block;
+    padding: 0;
+  }
+}

@@ -1,0 +1,23 @@
+<div>
+    <form [formGroup]="registerForm">
+        <div>
+        Username        <input type="text" autofocus formControlName="username" ><br>
+        <span *ngIf="(registerForm?.get('username')?.touched || registerForm?.get('username')?.dirty) &&  registerForm?.get('username')?.hasError('required')">Username is Mandatory</span>
+        </div>
+        <div>Email       <input type="text">
+       <span *ngIf="    (registerForm?.get('username')?.touched || registerForm?.get('email')?.dirty) &&  registerForm?.get('email')?.hasError('required')">Email is inavlid</span>
+            
+        </div>
+        <div>
+        Password        <input type="text" formControlName="password"><br>
+        <span *ngIf="(password?.touched && password?.invalid)">Password is mandatory</span>
+        </div>
+        <div>
+        retype Password <input type="text">
+        <span *ngIf="(password?.touched && password?.invalid) || password!=password">Password is mandatory</span>
+        </div>
+    <button class="btn btn-warning" [disabled]>Sign Up</button>
+    <button class="btn btn-warning" >Close</button>
+    
+</form>
+</div>

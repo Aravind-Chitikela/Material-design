@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" style = "display:flex;justify-content: space-between;">
+    <span> Micron </span>
+    <span *ngIf="us.isLogged; then trueblock; else falseblock;"></span>
+    <ng-template #trueblock>
+    <ul>
+        <a routerLink="/add-visitor">Add Visitor</a>
+        <li routerLink="/show-visitor">Show Visitor</li>
+        <li><a href="">Logout</a></li>
+    </ul>
+</ng-template>
+    <ng-template #falseblock>
+    <ul>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Register</a></li>
+    </ul>
+    </ng-template>
+
+</mat-toolbar>

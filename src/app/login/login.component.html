@@ -1,0 +1,13 @@
+<div>
+    <form [formGroup]="loginForm">
+    Username        <input type="text" autofocus formControlName="username" [style]=""><br>
+    <span *ngIf="(username?.touched || username?.dirty) &&  username?.hasError('required')">Username is mandatory</span>
+    <br>
+    Password        <input type="text" formControlName="password"><br>
+    <span *ngIf="(loginForm?.get('password')?.touched) && loginForm?.get('password')?.invalid">Password is mandatory</span>
+<br>
+    <button class="btn btn-warning" on-click="SignUp()" [disabled]="loginForm.invalid">Sign Up</button>
+    <button class="btn btn-warning" on-click="Close()">Close</button>
+    
+</form>
+</div>

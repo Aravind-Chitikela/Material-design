@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Registered Users</mat-card-title>
+    </mat-card-header>
+</mat-card>
+
+<mat-card class="example-card" *ngFor="let v of visitors;let i = index;" >    
+    <mat-card-content >
+        Id: {{i+1}} <br>
+        Name: {{v.name}} <br>
+        ContactPerson: {{v.contactPerson}} <br>
+        Company: {{v.company}} <br>
+        Mobile Number: {{v.mobile}} <br>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" (click) = "editHandler(i)">Edit</button>
+            <button mat-raised-button color="primary" (click) = "deleteHandler()">Delete</button>
+          </mat-card-actions>
+    </mat-card-content>
+</mat-card>
